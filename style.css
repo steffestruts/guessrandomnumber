@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  color: green;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  height: 100svh;
+  justify-items: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.guess-the-number {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  input {
+    padding: .25em;
+  }
+  input::placeholder {
+    color: #bababa;
+  }
+}
