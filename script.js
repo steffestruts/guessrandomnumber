@@ -1,37 +1,20 @@
-/* // Credit: https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/
-// Function to generate random number
-function randomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
-}
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+let guess;
+let attempts = 0;
 
-let attempt = 0;
+btn = document.getElementById("btn-guess").addEventListener('click', () => {
+  userGuess = parseInt(document.getElementById("input-guess").value);
+  attempts++;
 
-let text = document.querySelector('#right-guess');
-
-const btn = document.getElementById('#btn-guess').addEventListener("click", function() {
-  let guess = document.getElementById('#input-guess').value;
-  attempt++;
-
-  if (randomNumber(0, 5) === guess) {
-    alert('Win!');
-    text.innerHTML = 'Rätt!'
-    document.getElementById('#right-guess');
+  if(userGuess == randomNumber) {
+    document.getElementById("right-guess").textContent = "Congratulations! You guessed the number ${randomNumber} in ${attempts} attempts.";
   }
-  else {
-    attempt++;
-    alert('Försök igen');
+  else if (userGuess > randomNumber) {
+    document.getElementById("right-guess").textContent = "För högt";
   }
-  console.log(randomNumber(0, 100));
-})
+  else (userGuess < randomNumber); {
+    document.getElementById("right-guess").textContent = "För lågt";
+  }
+});
 
-console.log(guess); */
-
-randomNumber = Math.floor(Math.random() * 100);
-
-let attempt = 0;
-
-document.getElementById('#btn-guess').addEventListener('click', function() {
-  
-})
-
-console.log(test);
+console.log(randomNumber);
